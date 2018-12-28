@@ -1,0 +1,9 @@
+Test
+ich bin ein test.html zum test von share ordner mit container
+
+my Application run aon nginx server
+the nginx will start on docker container
+the container share with host an ordner via :
+docker run -itd  -v ${pwd}:'/usr/share/nginx/html' -p 8084:80 --name son_webtest nginx
+attention the ${psw} is the currently order and contain an index.html
+'/usr/share/nginx/html'  is the standard share ordner of nginx

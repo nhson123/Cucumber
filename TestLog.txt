@@ -1,0 +1,391 @@
+[1541373742.405][INFO]: COMMAND InitSession {
+   "capabilities": {
+      "firstMatch": [ {
+         "browserName": "chrome",
+         "goog:chromeOptions": {
+            "args": [  ],
+            "extensions": [  ]
+         }
+      } ]
+   },
+   "desiredCapabilities": {
+      "browserName": "chrome",
+      "goog:chromeOptions": {
+         "args": [  ],
+         "extensions": [  ]
+      }
+   }
+}
+[1541373742.408][INFO]: Populating Preferences file: {
+   "alternate_error_pages": {
+      "enabled": false
+   },
+   "autofill": {
+      "enabled": false
+   },
+   "browser": {
+      "check_default_browser": false
+   },
+   "distribution": {
+      "import_bookmarks": false,
+      "import_history": false,
+      "import_search_engine": false,
+      "make_chrome_default_for_user": false,
+      "skip_first_run_ui": true
+   },
+   "dns_prefetching": {
+      "enabled": false
+   },
+   "profile": {
+      "content_settings": {
+         "pattern_pairs": {
+            "https://*,*": {
+               "media-stream": {
+                  "audio": "Default",
+                  "video": "Default"
+               }
+            }
+         }
+      },
+      "default_content_setting_values": {
+         "geolocation": 1
+      },
+      "default_content_settings": {
+         "geolocation": 1,
+         "mouselock": 1,
+         "notifications": 1,
+         "popups": 1,
+         "ppapi-broker": 1
+      },
+      "password_manager_enabled": false
+   },
+   "safebrowsing": {
+      "enabled": false
+   },
+   "search": {
+      "suggest_enabled": false
+   },
+   "translate": {
+      "enabled": false
+   }
+}
+[1541373742.412][INFO]: Populating Local State file: {
+   "background_mode": {
+      "enabled": false
+   },
+   "ssl": {
+      "rev_checking": {
+         "enabled": false
+      }
+   }
+}
+[1541373742.433][INFO]: Cannot switch to US keyboard layout - some keys may be interpreted incorrectly
+[1541373742.433][INFO]: Launching chrome: "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-background-networking --disable-client-side-phishing-detection --disable-default-apps --disable-hang-monitor --disable-popup-blocking --disable-prompt-on-repost --disable-sync --disable-web-resources --enable-automation --enable-logging --force-fieldtrials=SiteIsolationExtensions/Control --ignore-certificate-errors --load-extension="C:\Users\Hoang.Son.Nguyen\AppData\Local\Temp\scoped_dir57648_17763\internal" --log-level=0 --metrics-recording-only --no-first-run --password-store=basic --remote-debugging-port=12198 --test-type=webdriver --use-mock-keychain --user-data-dir="C:\Users\Hoang.Son.Nguyen\AppData\Local\Temp\scoped_dir57648_26171" data:,
+[1541373742.770][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1541373743.821][INFO]: RESPONSE InitSession {
+   "acceptInsecureCerts": false,
+   "acceptSslCerts": false,
+   "applicationCacheEnabled": false,
+   "browserConnectionEnabled": false,
+   "browserName": "chrome",
+   "chrome": {
+      "chromedriverVersion": "2.37.544315 (730aa6a5fdba159ac9f4c1e8cbc59bf1b5ce12b7)",
+      "userDataDir": "C:\\Users\\Hoang.Son.Nguyen\\AppData\\Local\\Temp\\scoped_dir57648_26171"
+   },
+   "cssSelectorsEnabled": true,
+   "databaseEnabled": false,
+   "handlesAlerts": true,
+   "hasTouchScreen": false,
+   "javascriptEnabled": true,
+   "locationContextEnabled": true,
+   "mobileEmulationEnabled": false,
+   "nativeEvents": true,
+   "networkConnectionEnabled": false,
+   "pageLoadStrategy": "normal",
+   "platform": "Windows NT",
+   "rotatable": false,
+   "setWindowRect": true,
+   "~~~": "..."
+}
+[1541373743.845][INFO]: COMMAND MaximizeWindow {
+   "handle": "current",
+   "windowHandle": "current"
+}
+[1541373743.846][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1541373744.996][INFO]: RESPONSE MaximizeWindow
+[1541373745.012][INFO]: COMMAND Navigate {
+   "url": "https://www.wienerwohnen.at/"
+}
+[1541373745.012][INFO]: Waiting for pending navigations...
+[1541373745.053][INFO]: Done waiting for pending navigations. Status: ok
+[1541373745.235][INFO]: Waiting for pending navigations...
+[1541373746.487][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.487][INFO]: RESPONSE Navigate
+[1541373746.491][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//a[@class='logo']"
+}
+[1541373746.491][INFO]: Waiting for pending navigations...
+[1541373746.492][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.504][INFO]: Waiting for pending navigations...
+[1541373746.509][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.509][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.2720445022569522-1"
+}
+[1541373746.511][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.2720445022569522-1"
+}
+[1541373746.511][INFO]: Waiting for pending navigations...
+[1541373746.512][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.522][INFO]: Waiting for pending navigations...
+[1541373746.523][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.523][INFO]: RESPONSE IsElementDisplayed true
+[1541373746.525][INFO]: COMMAND GetElementText {
+   "id": "0.2720445022569522-1"
+}
+[1541373746.525][INFO]: Waiting for pending navigations...
+[1541373746.526][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.538][INFO]: Waiting for pending navigations...
+[1541373746.541][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.541][INFO]: RESPONSE GetElementText "Startseite von Wiener Wohnen"
+[1541373746.543][INFO]: COMMAND GetElementText {
+   "id": "0.2720445022569522-1"
+}
+[1541373746.543][INFO]: Waiting for pending navigations...
+[1541373746.544][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.549][INFO]: Waiting for pending navigations...
+[1541373746.550][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.550][INFO]: RESPONSE GetElementText "Startseite von Wiener Wohnen"
+[1541373746.552][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//a[contains(text(),'InteressentIn')]"
+}
+[1541373746.552][INFO]: Waiting for pending navigations...
+[1541373746.553][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.565][INFO]: Waiting for pending navigations...
+[1541373746.567][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.567][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.2720445022569522-2"
+}
+[1541373746.568][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.2720445022569522-2"
+}
+[1541373746.568][INFO]: Waiting for pending navigations...
+[1541373746.578][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.590][INFO]: Waiting for pending navigations...
+[1541373746.591][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.592][INFO]: RESPONSE IsElementDisplayed true
+[1541373746.593][INFO]: COMMAND IsElementEnabled {
+   "id": "0.2720445022569522-2"
+}
+[1541373746.593][INFO]: Waiting for pending navigations...
+[1541373746.594][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.601][INFO]: Waiting for pending navigations...
+[1541373746.601][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.601][INFO]: RESPONSE IsElementEnabled true
+[1541373746.614][INFO]: COMMAND ClickElement {
+   "id": "0.2720445022569522-2"
+}
+[1541373746.614][INFO]: Waiting for pending navigations...
+[1541373746.616][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.660][INFO]: Waiting for pending navigations...
+[1541373746.952][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.953][INFO]: RESPONSE ClickElement
+[1541373746.955][INFO]: COMMAND FindElement {
+   "using": "css selector",
+   "value": "#mainnav > li:nth-child(2) > ul > li:nth-child(1) > a"
+}
+[1541373746.955][INFO]: Waiting for pending navigations...
+[1541373746.961][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.976][INFO]: Waiting for pending navigations...
+[1541373746.977][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.977][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.22205616643575965-1"
+}
+[1541373746.978][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.22205616643575965-1"
+}
+[1541373746.978][INFO]: Waiting for pending navigations...
+[1541373746.979][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.990][INFO]: Waiting for pending navigations...
+[1541373746.991][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.991][INFO]: RESPONSE IsElementDisplayed true
+[1541373746.992][INFO]: COMMAND IsElementEnabled {
+   "id": "0.22205616643575965-1"
+}
+[1541373746.992][INFO]: Waiting for pending navigations...
+[1541373746.993][INFO]: Done waiting for pending navigations. Status: ok
+[1541373746.999][INFO]: Waiting for pending navigations...
+[1541373747.000][INFO]: Done waiting for pending navigations. Status: ok
+[1541373747.000][INFO]: RESPONSE IsElementEnabled true
+[1541373747.001][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.22205616643575965-1"
+}
+[1541373747.002][INFO]: Waiting for pending navigations...
+[1541373747.002][INFO]: Done waiting for pending navigations. Status: ok
+[1541373747.006][INFO]: Waiting for pending navigations...
+[1541373747.007][INFO]: Done waiting for pending navigations. Status: ok
+[1541373747.007][INFO]: RESPONSE IsElementDisplayed true
+[1541373747.008][INFO]: COMMAND Screenshot {
+
+}
+[1541373747.008][INFO]: Waiting for pending navigations...
+[1541373747.009][INFO]: Done waiting for pending navigations. Status: ok
+[1541373747.589][INFO]: Waiting for pending navigations...
+[1541373747.590][INFO]: Done waiting for pending navigations. Status: ok
+[1541373747.591][INFO]: RESPONSE Screenshot "iVBORw0KGgoAAAANSUhEUgAAB4AAAAOPCAYAAAAqu9wAAAAgAElEQVR4nOzdaZClWV7f9+9Znu3uN2/uWXt1dXf1vgzMRg8wG4sGBCNgAIUwKBAEsgNhLMkOByGPFbb1AgMKbEI2iLCDwEIWQiAxWMDAYKQZZppZe6uu7qrqWnPPvPuznuec4xdZYFnGjANaUxTkJ..."
+[1541373747.732][INFO]: COMMAND ClickElement {
+   "id": "0.22205616643575965-1"
+}
+[1541373747.732][INFO]: Waiting for pending navigations...
+[1541373747.734][INFO]: Done waiting for pending navigations. Status: ok
+[1541373747.791][INFO]: Waiting for pending navigations...
+[1541373747.993][INFO]: Done waiting for pending navigations. Status: ok
+[1541373747.993][INFO]: RESPONSE ClickElement
+[1541373747.997][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//h1[@id='page-title']"
+}
+[1541373747.997][INFO]: Waiting for pending navigations...
+[1541373748.003][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.018][INFO]: Waiting for pending navigations...
+[1541373748.019][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.019][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.05350886517453812-1"
+}
+[1541373748.020][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.05350886517453812-1"
+}
+[1541373748.020][INFO]: Waiting for pending navigations...
+[1541373748.021][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.030][INFO]: Waiting for pending navigations...
+[1541373748.031][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.031][INFO]: RESPONSE IsElementDisplayed true
+[1541373748.032][INFO]: COMMAND IsElementEnabled {
+   "id": "0.05350886517453812-1"
+}
+[1541373748.032][INFO]: Waiting for pending navigations...
+[1541373748.033][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.040][INFO]: Waiting for pending navigations...
+[1541373748.040][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.040][INFO]: RESPONSE IsElementEnabled true
+[1541373748.044][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//a[contains(text(),'der Wohnberatung Wien')]"
+}
+[1541373748.044][INFO]: Waiting for pending navigations...
+[1541373748.044][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.054][INFO]: Waiting for pending navigations...
+[1541373748.055][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.055][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.05350886517453812-2"
+}
+[1541373748.056][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.05350886517453812-2"
+}
+[1541373748.056][INFO]: Waiting for pending navigations...
+[1541373748.057][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.067][INFO]: Waiting for pending navigations...
+[1541373748.068][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.068][INFO]: RESPONSE IsElementDisplayed true
+[1541373748.070][INFO]: COMMAND IsElementEnabled {
+   "id": "0.05350886517453812-2"
+}
+[1541373748.070][INFO]: Waiting for pending navigations...
+[1541373748.071][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.077][INFO]: Waiting for pending navigations...
+[1541373748.078][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.078][INFO]: RESPONSE IsElementEnabled true
+[1541373748.080][INFO]: COMMAND SetTimeout {
+   "ms": 3000,
+   "type": "implicit"
+}
+[1541373748.080][INFO]: RESPONSE SetTimeout
+[1541373748.081][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.05350886517453812-2"
+}
+[1541373748.081][INFO]: Waiting for pending navigations...
+[1541373748.082][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.086][INFO]: Waiting for pending navigations...
+[1541373748.087][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.087][INFO]: RESPONSE IsElementDisplayed true
+[1541373748.088][INFO]: COMMAND IsElementEnabled {
+   "id": "0.05350886517453812-2"
+}
+[1541373748.088][INFO]: Waiting for pending navigations...
+[1541373748.088][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.091][INFO]: Waiting for pending navigations...
+[1541373748.092][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.092][INFO]: RESPONSE IsElementEnabled true
+[1541373748.094][INFO]: COMMAND ClickElement {
+   "id": "0.05350886517453812-2"
+}
+[1541373748.094][INFO]: Waiting for pending navigations...
+[1541373748.095][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.151][INFO]: Waiting for pending navigations...
+[1541373748.153][INFO]: Done waiting for pending navigations. Status: ok
+[1541373748.153][INFO]: RESPONSE ClickElement
+[1541373748.157][INFO]: COMMAND SetTimeout {
+   "ms": 3000,
+   "type": "implicit"
+}
+[1541373748.158][INFO]: RESPONSE SetTimeout
+[1541373748.159][INFO]: COMMAND GetWindow {
+
+}
+[1541373748.159][INFO]: RESPONSE GetWindow "CDwindow-5653213A4930C7F1C957F629ED5B306C"
+[1541373748.160][INFO]: COMMAND GetWindows {
+
+}
+[1541373748.160][INFO]: RESPONSE GetWindows [ "CDwindow-5653213A4930C7F1C957F629ED5B306C", "CDwindow-DF62470016B605D44523CD559DB73BDE" ]
+[1541373748.164][INFO]: COMMAND SwitchToWindow {
+   "name": "CDwindow-5653213A4930C7F1C957F629ED5B306C"
+}
+[1541373748.178][INFO]: RESPONSE SwitchToWindow
+[1541373748.181][INFO]: COMMAND SwitchToWindow {
+   "name": "CDwindow-DF62470016B605D44523CD559DB73BDE"
+}
+[1541373748.197][INFO]: RESPONSE SwitchToWindow
+[1541373748.201][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//img[@class='navbar-brand-logo-normal']"
+}
+[1541373748.202][INFO]: resolved localhost to ["::1","127.0.0.1"]
+[1541373749.208][INFO]: Waiting for pending navigations...
+[1541373749.217][INFO]: Done waiting for pending navigations. Status: ok
+[1541373749.251][INFO]: Waiting for pending navigations...
+[1541373749.253][INFO]: Done waiting for pending navigations. Status: ok
+[1541373749.253][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.995144207779938-1"
+}
+[1541373749.256][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.995144207779938-1"
+}
+[1541373749.256][INFO]: Waiting for pending navigations...
+[1541373749.257][INFO]: Done waiting for pending navigations. Status: ok
+[1541373749.276][INFO]: Waiting for pending navigations...
+[1541373749.278][INFO]: Done waiting for pending navigations. Status: ok
+[1541373749.278][INFO]: RESPONSE IsElementDisplayed true
+[1541373749.281][INFO]: COMMAND FindElement {
+   "using": "xpath",
+   "value": "//h1[contains(@class,'element-header')]"
+}
+[1541373749.281][INFO]: Waiting for pending navigations...
+[1541373749.282][INFO]: Done waiting for pending navigations. Status: ok
+[1541373749.292][INFO]: Waiting for pending navigations...
+[1541373749.293][INFO]: Done waiting for pending navigations. Status: ok
+[1541373749.293][INFO]: RESPONSE FindElement {
+   "ELEMENT": "0.995144207779938-2"
+}
+[1541373749.294][INFO]: COMMAND IsElementDisplayed {
+   "id": "0.995144207779938-2"
+}
+[1541373749.294][INFO]: Waiting for pending navigations...
+[1541373749.295][INFO]: Done waiting for pending navigations. Status: ok
+[1541373749.305][INFO]: Waiting for pending navigations...
+[1541373749.306][INFO]: Done waiting for pending navigations. Status: ok
+[1541373749.306][INFO]: RESPONSE IsElementDisplayed true
+[1541373749.308][INFO]: COMMAND Quit {
+
+}
+[1541373749.459][INFO]: RESPONSE Quit

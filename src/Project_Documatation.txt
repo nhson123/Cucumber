@@ -1,0 +1,83 @@
+Notice and Documentations of this project
+
+Tutorial on youtube
+  https://www.youtube.com/watch?v=5eezIEYqfCo&index=3&list=PL6tu16kXT9PpteusHGISu_lHcV6MbBtA6
+
+Create Project as Maven Project or as below
+  MavenRepository: https://mvnrepository.com/
+
+Cucumber for Java as Plugin in Intelij installed
+
+Feature file
+ - the first thing in Cucumber ist a feature file .feature
+ - Feature aufbau Given – die Szenariovoraussetzung
+                  When – das Verhalten, das eine Aktion im System ausführt
+                  Then – verifiziert Ergebnisse, die aufgrund des angegebenen Verhaltens erwartet werden
+ - the FeatureFiles could run direct from an IDE but out of an IDE you nees testRuner with runWithAttributes
+ - Steps are JavaClasses with written in FeatureFiles
+ - Bindings are attributes
+ - Cucumber with Java8 update if necessary: cucumber-java8 in maven dependence and in class implements En
+ - use the build for java 8  https://stackoverflow.com/questions/29888592/errorjava-javactask-source-release-8-requires-target-release-1-8
+ - by outline Scenario should take care on regrexpresion
+ - outline scenario could be more than one in a feature. they use defferent parameter
+ - Cucumber Hooks are Before and After annotation of Scenario in the Framework http://toolsqa.com/cucumber/cucumber-hooks/. Mit @tag, order=xxx  order is the sequence. biggest run as first
+ - picocontainer for cucumber install from mvnRepository -> BaseUtil in Base Package.
+ - Argument tranfomation convert ther Date in other format
+ - check The TestResult in testSet https://www.swtestacademy.com/junit-rules/
+
+
+ Selenium
+ - http://toolsqa.com/cucumber/first-cucumber-selenium-java-test/
+ - http://learn-automation.com
+
+ Cucumber + Xray
+ - https://interworks.com.mk/test-automation-solution-with-xray-and-cucumber/
+
+ Selenium server standalone
+ - start server in cmd: java -jar <path zum File> -port 4444 -role hub
+ "13:38:50.829 INFO [Hub.start] - Selenium Grid hub is up and running
+  13:38:50.830 INFO [Hub.start] - Nodes should register to http://172.28.3.186:444/grid/register/
+  13:38:50.831 INFO [Hub.start] - Clients should connect to http://172.28.3.186:444/wd/hub"
+- java C:\Users\Hoang.Son.Nguyen>java -Dwebdriver.chrome.driver=C:\Users\Hoang.Son.Nguyen\OneDrive\Public\Cucumber\src\test\webDriver\chromedriver.exe -Dwebdriver.gecko.driver=C:\Users\Hoang.Son.Nguyen\OneDrive\Public\Cucumber\src\test\webDriver\geckodriver.exe -jar C:\Users\Hoang.Son.Nguyen\OneDrive\Public\Cucumber\src\test\webDriver\selenium-server-standalone-3.141.59.jar -role node -port 4446 -hub http://192.168.0.52:4444/grid/register/
+       22:52:03.126 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+       22:52:03.219 INFO [GridLauncherV3.lambda$buildLaunchers$7] - Launching a Selenium Grid node on port 4446
+       2018-11-29 22:52:03.508:INFO::main: Logging initialized @582ms to org.seleniumhq.jetty9.util.log.StdErrLog
+       22:52:03.675 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+       22:52:03.742 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4446
+       22:52:03.742 INFO [GridLauncherV3.lambda$buildLaunchers$7] - Selenium Grid node is up and ready to register to the hub
+       22:52:03.833 INFO [SelfRegisteringRemote$1.run] - Starting auto registration thread. Will try to register every 5000 ms.
+       22:52:04.183 INFO [SelfRegisteringRemote.registerToHub] - Registering the node to the hub: http://192.168.0.52:4444/grid/register
+       22:52:04.287 INFO [SelfRegisteringRemote.registerToHub] - The node is registered to the hub and ready to use
+
+       https://www.softwaretestinghelp.com/selenium-grid-selenium-tutorial-29/
+
+- https://interworks.com.mk/test-automation-solution-with-xray-and-cucumber/
+- docker commands
+https://docs.docker.com/engine/reference/commandline/container_start/#related-commands
+- docker --help
+
+- docker push Just three simple steps:
+dockerbuild: docker build -t image-name .
+docker login --username username --password password
+docker tag my-image username/my-repo
+docker push username/my-repo
+(my_image= my local image, my-repo = my Image on depositoery)
+example:
+PS C:\Users\Hoang.Son.Nguyen\OneDrive\Public\DockerGit> docker tag son_docker_git  nhsvn/my_docker_git
+PS C:\Users\Hoang.Son.Nguyen\OneDrive\Public\DockerGit> docker push nhsvn/my_docker_git
+
+- to run bash interaction: docker run -it container_name bash
+- Link the containers :
+docker run --name son_sql -e MYSQL_ROOT_PASSWORD=son -d mysql:5.6
+docker run --name son_wp --link son_sql:mysql -p 8080:80 -d wordpress
+- needed software to docker: docker, kinematic not newest, vnc viewer,
+- vnc link 127.0.0.1:<node port of container>
+- Kinematic to display docker processes
+- https://github.com/pictolearn
+- https://www.ab-heute-programmieren.de/docker-teil-4-das-dockerfile/
+Dockerfile can be writen in Gvim on Window or Vim
+
+-share ordner to start a Server-Client webapp. App is local and Web = nginx on container, attention the path and confirm the file share
+ docker run -itd  -v ${pwd}:'/usr/share/nginx/html' -p 8084:80 --name son_webtest nginx
+
+- SourceTree als Git tool
