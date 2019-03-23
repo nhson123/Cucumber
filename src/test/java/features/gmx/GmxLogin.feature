@@ -1,7 +1,7 @@
 Feature: GmxLoginFeature
   This Feature will login in Gmx Email Server
 
-  @chrome
+  @firefox
   Scenario: Login with correct name and pwd
     Given i navigate to the Gmx login page
 

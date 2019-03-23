@@ -1,6 +1,6 @@
 Feature: check data of excel
 
-  @phantomJs
+  @chrome
   Scenario Outline: excel
     Given ich lese daten eines excelFile
     When ich schreibe eine neue zeile

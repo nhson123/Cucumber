@@ -34,8 +34,7 @@ public class Hook extends BaseUtil {
 
   @Before("@chrome")
   public void beforeScenarioChrome() throws IOException {
-    // System.setProperty(
-    //     "webdriver.chrome.driver", PropertiesFileReader.getValue("chromeWebDriverPath"));
+    System.setProperty("webdriver.chrome.driver", PropertiesFileReader.getValue("chromeWebDriverPath"));
     // just to deactivate the download warning in Chrome
     String downloadFilepath = System.getProperty("user.home") + "/Desktop";
     HashMap<String, Object> chromePrefs = new HashMap<String, Object>();

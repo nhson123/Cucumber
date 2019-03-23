@@ -9,7 +9,7 @@ import java.util.Properties;
 public class PropertiesFileReader {
 
   public static String getValue(String key) throws IOException {
-    final String propFilePath = ".\\src\\test\\configs\\Confuguration.properties";
+    final String propFilePath = "/Users/hnguyen/JavaTutor/Cucumber/src/test/configs/Confuguration.properties";
     BufferedReader reader = new BufferedReader(new FileReader(propFilePath));
     Properties prop = new Properties();
     prop.load(reader);

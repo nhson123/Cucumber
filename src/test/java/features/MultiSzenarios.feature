@@ -1,5 +1,5 @@
 Feature: MultiSzenariosFeature
-
+@phantomjs
   Scenario: LogInGoogle
     Given i navigate to GoogleStartPage
     And i enter my username and password
