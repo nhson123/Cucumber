@@ -14,7 +14,7 @@ public class BaseUtil {
     // Dient zum übertragen von Infos z.B. Webdriver von inistep zu step
     public String stepInfo;
     public String stepStatus;
-    private static final Logger LOGGER = Logger.getLogger(ClassName.class.getName());
+    public static final Logger LOGGER = Logger.getLogger(ClassName.class.getName());
 
     // Selenium
     public WebDriver webDriver;
