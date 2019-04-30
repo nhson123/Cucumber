@@ -102,7 +102,8 @@ public class Hook extends BaseUtil {
     public void afterScenario(Scenario scenario) {
         if (scenario.isFailed()) {
             UtilityScreenshot.CaptureScreenshot(base.webDriver, scenario.getName());
-        } else if (null != base.webDriver) {
+        }
+        if (null != base.webDriver) {
             base.webDriver.quit();
             base.webDriver = null;
         }

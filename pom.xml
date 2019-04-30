@@ -17,11 +17,11 @@
             <version>1.2.5</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+        <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java8 -->
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java8</artifactId>
-            <version>1.2.5</version>
+            <version>4.3.0</version>
         </dependency>
 
         <dependency>
@@ -149,6 +149,14 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-maven -->
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-maven</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
@@ -160,7 +168,6 @@
                 <configuration>
                     <parallel>methods</parallel>
                     <!--suppress UnresolvedMavenProperty -->
-                    <threadCount>${threads}</threadCount>
                     <includes>
                         <include>**/*WD.java</include>
                     </includes>
