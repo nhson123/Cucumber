@@ -33,4 +33,20 @@ public class BausDB_PersonenadminFactory {
         }
 
     }
+
+    @CacheLookup
+    @FindBy(how = How.XPATH, using = "//h1[contains(text(),'Personenadministration')]")
+    WebElement personErstellenBtn;
+
+    public boolean personErstellenBtn_Check() {
+        if (personErstellenBtn.isDisplayed() && personErstellenBtn.isEnabled()) {
+            LOGGER.info(this.getClass().getName() + ": personErstellenBtn is available");
+            return true;
+        } else {
+            LOGGER.warning("personErstellenBtn is not available");
+            return false;
+
+        }
+
+    }
 }
