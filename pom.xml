@@ -168,6 +168,7 @@
                 <configuration>
                     <parallel>methods</parallel>
                     <!--suppress UnresolvedMavenProperty -->
+                    <!-- <threadCount>${threads}</threadCount> -->
                     <includes>
                         <include>**/*WD.java</include>
                     </includes>

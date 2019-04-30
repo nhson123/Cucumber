@@ -1,14 +1,18 @@
 package Steps.bausDBSteps;
 
 import Steps.bausDBSteps.bausDB_PageFactory.BausDB_LoginPageFactory;
+import Steps.bausDBSteps.bausDB_PageFactory.BausDB_PersonenadminFactory;
 import base.BaseUtil;
 import cucumber.api.java8.En;
 import org.openqa.selenium.support.PageFactory;
+
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class BausDB_Login extends BaseUtil implements En {
     private BaseUtil base;
     private BausDB_LoginPageFactory bausDB_loginPageFactory;
+    private BausDB_PersonenadminFactory bausDB_personenadminFactory;
 
     public BausDB_Login(BaseUtil base) {
         this.base = base;
@@ -30,8 +34,14 @@ public class BausDB_Login extends BaseUtil implements En {
         });
 
         Then("^Login Fehlermeldung ersichtlich$", () -> {
-            bausDB_loginPageFactory.loginFehler_Check();
+            assertTrue(bausDB_loginPageFactory.loginFehler_Check());
         });
+        Then("^ich bin auf Personenadmin Seite$", () -> {
+            bausDB_personenadminFactory = PageFactory.initElements(base.webDriver,BausDB_PersonenadminFactory.class);
+            assertTrue(bausDB_personenadminFactory.personAdminLogo_Check());
+            assertEquals(base.webDriver.getTitle(), "Wiener Wohnen | Bauservices DB");
+        });
+
 
     }
 }
