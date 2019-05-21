@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  teamscale:
+    image: 'cqse/teamscale:4.9.4'
+    restart: always
+   # volumes:
+    #    - /Users/hnguyen/JavaTutor/Cucumber/src/test/configs/teamScale/storage:/opt/teamscale/storage
+    #    - /Users/hnguyen/JavaTutor/Cucumber/src/test/configs/teamScale/logs:/opt/teamscale/logs
+     #   - /Users/hnguyen/JavaTutor/Cucumber/src/test/configs/teamScale/jvm.properties:/opt/teamscale/config/jvm.properties:ro
+     #   - /Users/hnguyen/JavaTutor/Cucumber/src/test/configs/teamScale/teamscale.properties:/opt/teamscale/config/teamscale.properties:ro
+      #  - /Users/hnguyen/JavaTutor/Cucumber/src/test/configs/teamScale/cache4j.config:/opt/teamscale/config/cache4j.config:ro
+      #  - /Users/hnguyen/JavaTutor/Cucumber/src/test/configs/teamScale/log4j2.yaml:/opt/teamscale/config/log4j2.yaml
+      #  - /Users/hnguyen/JavaTutor/Cucumber/src/test/configs/teamScale/teamscale.license:/opt/teamscale/config/teamscale.license:ro
+      #  - /Users/hnguyen/JavaTutor/Cucumber/src/test/configs/teamScale:/backup
+    ports:
+      - "8080:8080"

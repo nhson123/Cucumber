@@ -7,6 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.picocontainer.classname.ClassName;
 
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 public class BausDB_LoginPageFactory {
@@ -16,6 +17,7 @@ public class BausDB_LoginPageFactory {
 
     public BausDB_LoginPageFactory(WebDriver driver) {
         this.driver = driver;
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
     }
 
     @CacheLookup

@@ -3,6 +3,7 @@ package Steps.bausDBSteps.bausDB_PageFactory;
 import org.openqa.selenium.WebElement;
 import org.picocontainer.classname.ClassName;
 
+import java.util.List;
 import java.util.logging.Logger;
 
 public class PageFactoryUtil {
@@ -40,4 +41,12 @@ public class PageFactoryUtil {
         }
 
     }
-}
+
+    public static String[] attribute_List(List<WebElement> list) {
+        String[] array = new String[list.size()];
+        for (int i = 0; i < list.size(); i++) {
+            array[i] = list.get(i).getText();
+        }
+        return array;
+    }
+    }

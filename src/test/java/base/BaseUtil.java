@@ -3,6 +3,7 @@ package base;
 import org.openqa.selenium.WebDriver;
 import org.picocontainer.classname.ClassName;
 
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
 /**
@@ -18,4 +19,6 @@ public class BaseUtil {
 
     // Selenium
     public WebDriver webDriver;
+
 }
+
