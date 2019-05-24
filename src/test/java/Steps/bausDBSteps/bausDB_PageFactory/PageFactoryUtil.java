@@ -7,23 +7,24 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class PageFactoryUtil {
-     static final Logger LOGGER = Logger.getLogger(ClassName.class.getName());
+    static final Logger LOGGER = Logger.getLogger(ClassName.class.getName());
 
-     static boolean displayed_enabled_check(String className, WebElement element){
-        if(element.isEnabled() && element.isDisplayed()){
+    static boolean displayed_enabled_check(String className, WebElement element) {
+        if (element.isEnabled() && element.isDisplayed()) {
             LOGGER.info(className + ": is displayed and enabled");
             return true;
-        }else {
+        } else {
             LOGGER.info(className + ": is NOT displayed or/and enabled");
             return false;
         }
 
     }
-    static boolean displayed_check(String className, WebElement element){
-        if(element.isDisplayed()){
+
+    static boolean displayed_check(String className, WebElement element) {
+        if (element.isDisplayed()) {
             LOGGER.info(className + ": is displayed");
             return true;
-        }else {
+        } else {
             LOGGER.info(className + ": is NOT displayed");
             return false;
         }
@@ -31,11 +32,11 @@ public class PageFactoryUtil {
     }
 
 
-    static boolean enaabled_check(String className, WebElement element){
-        if(element.isEnabled()){
+    static boolean enaabled_check(String className, WebElement element) {
+        if (element.isEnabled()) {
             LOGGER.info(className + ": is enabled");
             return true;
-        }else {
+        } else {
             LOGGER.info(className + ": is NOT enabled");
             return false;
         }
@@ -49,4 +50,13 @@ public class PageFactoryUtil {
         }
         return array;
     }
+
+    public static void webelement_Setvalue(WebElement element, String value) {
+        element.clear();
+        element.sendKeys(value);
     }
+
+    public static String get_WebElement_Attribute(WebElement element, String attribut){
+        return element.getAttribute(attribut);
+    }
+}
