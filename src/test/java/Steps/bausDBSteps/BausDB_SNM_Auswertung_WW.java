@@ -1,5 +1,6 @@
 package Steps.bausDBSteps;
 
+import Steps.bausDBSteps.bausDB_PageFactory.BausDB_SNM_Auswertung_Details_PF;
 import Steps.bausDBSteps.bausDB_PageFactory.BausDB_SNM_Auswertung_WW_PF;
 import base.BaseUtil;
 import cucumber.api.java8.En;
@@ -12,6 +13,7 @@ import static org.testng.Assert.assertNotEquals;
 public class BausDB_SNM_Auswertung_WW implements En {
     private BaseUtil base;
     private BausDB_SNM_Auswertung_WW_PF bausDB_snm_auswertung_ww_pf;
+    private BausDB_SNM_Auswertung_Details_PF bausDB_snm_auswertung_details_pf;
 
     public BausDB_SNM_Auswertung_WW(BaseUtil base) {
         this.base = base;
@@ -35,6 +37,10 @@ public class BausDB_SNM_Auswertung_WW implements En {
             bausDB_snm_auswertung_ww_pf.url_Copy_click();
             assertNotEquals(before,bausDB_snm_auswertung_ww_pf.get_Temp_Url("value"));
             base.webDriver.get(bausDB_snm_auswertung_ww_pf.get_Temp_Url("value"));
+            assertEquals(base.webDriver.getTitle(), "Wiener Wohnen | Bauservices DB");
+            bausDB_snm_auswertung_details_pf = PageFactory.initElements(base.webDriver,BausDB_SNM_Auswertung_Details_PF.class);
+            assertTrue(bausDB_snm_auswertung_details_pf.ww_Logo_Check());
+            assertTrue(bausDB_snm_auswertung_details_pf.table_Header_Check());
 
             try {
                 Thread.sleep(2000);
@@ -46,4 +52,4 @@ public class BausDB_SNM_Auswertung_WW implements En {
     }
 
 }
-//TODO save link temporary and navigate to it
+

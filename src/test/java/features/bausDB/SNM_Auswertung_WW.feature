@@ -1,4 +1,4 @@
-@chrome
+@firefox
 Feature: Navigate and generate SNM Auswertung Wiener Wohnen
 
   //TODO: links in properties file ablegen

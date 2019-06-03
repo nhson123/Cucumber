@@ -454,6 +454,7 @@ public class BausDB_Personenadmin_PF {
         return (PageFactoryUtil.displayed_enabled_check(className + "." + administration_btn.getTagName(), administration_btn));
     }
 
+    // Administration
     public void administration_btn_click(){
         administration_btn.click();
     }
@@ -468,6 +469,129 @@ public class BausDB_Personenadmin_PF {
 
     public void cellButton_click() {
         cellButton.click();
-    }    
-}
+    }
+
+    @CacheLookup
+    @FindBy(how = How.XPATH, using = "//li[@class='nav-item dropdown show']//a[*]")
+    List<WebElement> adminDropdownlist;
+
+    public boolean adminDropdownlist_Check() {
+        boolean check = true;
+        for (int i = 0; i < adminDropdownlist.size(); i++) {
+            switch (i) {
+                case 0:
+                    if (!adminDropdownlist.get(0).getText().equals("Administration")) {
+                        check = false;
+                    }
+                case 1:
+                    if (!adminDropdownlist.get(1).getText().equals("Personenadministration")) {
+                        check = false;
+                    }
+                case 2:
+                    if (!adminDropdownlist.get(2).getText().equals("Gruppen Verwaltung")) {
+                        check = false;
+                    }
+                case 3:
+                    if (!adminDropdownlist.get(3).getText().equals("Firmenadministration")) {
+                        check = false;
+                    }
+                case 4:
+                    if (!adminDropdownlist.get(4).getText().equals("RA Lose")) {
+                        check = false;
+                    }
+                case 5:
+                    if (!adminDropdownlist.get(5).getText().equals("Gebiets Verwaltung")) {
+                        check = false;
+                    }
+                case 6:
+                    if (!adminDropdownlist.get(6).getText().equals("Leistungsverzeichnis")) {
+                        check = false;
+                    }
+                case 7:
+                    if (!adminDropdownlist.get(7).getText().equals("Gewerkadministration")) {
+                        check = false;
+                    }
+                case 8:
+                    if (!adminDropdownlist.get(8).getText().equals("Sachkonto Verwaltung")) {
+                        check = false;
+                    }
+                case 9:
+                    if (!adminDropdownlist.get(9).getText().equals("Feiertag Verwaltung")) {
+                        check = false;
+                    }
+                case 10:
+                    if (!adminDropdownlist.get(10).getText().equals("Identadressen Verwaltung")) {
+                        check = false;
+                    }
+                case 11:
+                    if (!adminDropdownlist.get(11).getText().equals("Planleistung Verwaltung")) {
+                        check = false;
+                    }
+                case 12:
+                    if (!adminDropdownlist.get(12).getText().equals("Geschoß Verwaltung")) {
+                        check = false;
+                    }
+                case 13:
+                    if (!adminDropdownlist.get(13).getText().equals("Wärmebereitungsgerät Verwaltung")) {
+                        check = false;
+                    }
+                case 14:
+                    if (!adminDropdownlist.get(14).getText().equals("Gerätezustand Verwaltung")) {
+                        check = false;
+                    }
+                case 15:
+                    if (!adminDropdownlist.get(15).getText().equals("Ursachen Verwaltung")) {
+                        check = false;
+                    }
+                case 16:
+                    if (!adminDropdownlist.get(16).getText().equals("Defektkatalog Verwaltung")) {
+                        check = false;
+                    }
+                case 17:
+                    if (!adminDropdownlist.get(17).getText().equals("Ablauf Status Verwaltung")) {
+                        check = false;
+                    }
+                case 18:
+                    if (!adminDropdownlist.get(18).getText().equals("Bearbeitungsstatus LWI Verwaltung")) {
+                        check = false;
+                    }
+                case 19:
+                    if (!adminDropdownlist.get(19).getText().equals("Regiestundenverwaltung")) {
+                        check = false;
+                    }
+                case 20:
+                    if (!adminDropdownlist.get(20).getText().equals("Checklistelemente Verwaltung")) {
+                        check = false;
+                    }
+            }
+        }
+            return check;
+        }
+
+    @CacheLookup
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Rollenadministration')]")
+    WebElement rollenAdministration;
+
+    public boolean rollenAdministration_check() {
+        return (PageFactoryUtil.displayed_enabled_check(className + "." + rollenAdministration.getTagName(), rollenAdministration));
+    }
+
+    @CacheLookup
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Berechtigungsadministration')]")
+    WebElement berechtigungsadminstration;
+
+    public boolean berechtigungsadminstration_check() {
+        return (PageFactoryUtil.displayed_enabled_check(className + "." + berechtigungsadminstration.getTagName(), berechtigungsadminstration));
+    }
+
+    @CacheLookup
+    @FindBy(how = How.XPATH, using = "//a[contains(text(),'Berechtigungsgruppenadministration')]")
+    WebElement berechtigungsGruppenadminstration;
+
+    public boolean berechtigungsGruppenadminstration_check() {
+        return (PageFactoryUtil.displayed_enabled_check(className + "." + berechtigungsGruppenadminstration.getTagName(), berechtigungsGruppenadminstration));
+    }
+    }
+
+
 

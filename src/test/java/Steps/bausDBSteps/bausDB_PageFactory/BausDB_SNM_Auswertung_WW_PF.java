@@ -43,7 +43,7 @@ public class BausDB_SNM_Auswertung_WW_PF {
     }
 
     @CacheLookup
-    @FindBy(how = How.XPATH, using = "//label[contains(text(),'Gültigkeit')]")
+    @FindBy(how = How.XPATH, using = "//label[contains(text(),'Gültigkeit (Tage)')]")
     WebElement validity_Label;
 
     public boolean validity_Label_Check() {

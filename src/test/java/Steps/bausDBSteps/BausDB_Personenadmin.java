@@ -68,12 +68,18 @@ public class BausDB_Personenadmin {
                 assertTrue(bausDB_personenadminPF.wbg_Zielübersicht_check());
                 assertTrue(bausDB_personenadminPF.administration_btn_check());
                 bausDB_personenadminPF.administration_btn_click();
-                bausDB_personenadminPF.cellButton_click();
+                assertTrue(bausDB_personenadminPF.adminDropdownlist_Check());
+                assertTrue(bausDB_personenadminPF.rollenAdministration_check());
+                assertTrue(bausDB_personenadminPF.berechtigungsadminstration_check());
+                assertTrue(bausDB_personenadminPF.berechtigungsGruppenadminstration_check());
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+
+                bausDB_personenadminPF.administration_btn_click();
+                bausDB_personenadminPF.cellButton_click();
 
             });
         }}
