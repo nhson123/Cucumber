@@ -22,6 +22,8 @@ public class BausDB_Personenadmin {
             And("^ich sehe sämtliche Webelement auf PersonenadminSeite$", () -> {
                 bausDB_personenadminPF = PageFactory.initElements(base.webDriver, BausDB_Personenadmin_PF.class);
                 assertTrue(bausDB_personenadminPF.personErstellenBtn_Check());
+                assertTrue(bausDB_personenadminPF.perlustrierung_Hochladen_check());
+                assertTrue(bausDB_personenadminPF.logged_User_check());
                 assertTrue(bausDB_personenadminPF.tabelPersonLength_check());
                 assertTrue(bausDB_personenadminPF.eintraegeAnzeigen_check());
                 assertTrue(bausDB_personenadminPF.suchenLaben_check());
@@ -72,6 +74,11 @@ public class BausDB_Personenadmin {
                 assertTrue(bausDB_personenadminPF.rollenAdministration_check());
                 assertTrue(bausDB_personenadminPF.berechtigungsadminstration_check());
                 assertTrue(bausDB_personenadminPF.berechtigungsGruppenadminstration_check());
+                bausDB_personenadminPF.logged_User_click();
+                assertTrue(bausDB_personenadminPF.password_Aendern_check());
+                assertTrue(bausDB_personenadminPF.logout_btn_check());
+                //bausDB_personenadminPF.logout_click();
+
                 try {
                     Thread.sleep(2000);
                 } catch (InterruptedException e) {
@@ -81,6 +88,8 @@ public class BausDB_Personenadmin {
                 bausDB_personenadminPF.administration_btn_click();
                 bausDB_personenadminPF.cellButton_click();
 
+
             });
-        }}
+        }
+    }
 }

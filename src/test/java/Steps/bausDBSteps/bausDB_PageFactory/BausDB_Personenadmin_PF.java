@@ -455,7 +455,7 @@ public class BausDB_Personenadmin_PF {
     }
 
     // Administration
-    public void administration_btn_click(){
+    public void administration_btn_click() {
         administration_btn.click();
     }
 
@@ -565,8 +565,8 @@ public class BausDB_Personenadmin_PF {
                     }
             }
         }
-            return check;
-        }
+        return check;
+    }
 
     @CacheLookup
     @FindBy(how = How.XPATH, using = "//a[contains(text(),'Rollenadministration')]")
@@ -591,7 +591,48 @@ public class BausDB_Personenadmin_PF {
     public boolean berechtigungsGruppenadminstration_check() {
         return (PageFactoryUtil.displayed_enabled_check(className + "." + berechtigungsGruppenadminstration.getTagName(), berechtigungsGruppenadminstration));
     }
+
+    @CacheLookup
+    @FindBy(how = How.ID, using = "upload_link")
+    WebElement perlustrierung_Hochladen;
+
+    public boolean perlustrierung_Hochladen_check() {
+        return (PageFactoryUtil.displayed_enabled_check(className + "." + perlustrierung_Hochladen.getTagName(), perlustrierung_Hochladen) && perlustrierung_Hochladen.getText().equals("Perlustrierungs Hochladen"));
     }
+
+    @CacheLookup
+    @FindBy(how = How.XPATH, using = "//ul[@class='navbar-nav ml-auto']//a[@id='navbarDropdown']")
+    WebElement logged_User;
+
+    public boolean logged_User_check() {
+        return (PageFactoryUtil.displayed_enabled_check(className + "." + logged_User.getTagName(), logged_User));
+    }
+
+    public void logged_User_click(){
+        logged_User.click();
+    }
+
+    @CacheLookup
+    @FindBy(how = How.XPATH, using = "//div[@class='dropdown-menu show']//a[1]")
+    WebElement password_Aendern;
+
+    public boolean password_Aendern_check() {
+        wait.until(ExpectedConditions.visibilityOf(password_Aendern));
+        return (PageFactoryUtil.displayed_enabled_check(className + "." + password_Aendern.getTagName(), password_Aendern) && password_Aendern.getText().equals("Passwort ändern"));
+    }
+
+    @CacheLookup
+    @FindBy(how = How.XPATH, using = "//ul[@class='navbar-nav ml-auto']//a[2]")
+    WebElement logout_btn;
+
+    public boolean logout_btn_check() {
+        wait.until(ExpectedConditions.visibilityOf(logout_btn));
+        return (PageFactoryUtil.displayed_enabled_check(className + "." + logout_btn.getTagName(), logout_btn) && logout_btn.getText().equals("Logout"));
+    }
+    public void logout_click(){
+        logout_btn.click();
+    }
+}
 
 
 
