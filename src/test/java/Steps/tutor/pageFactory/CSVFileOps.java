@@ -36,4 +36,21 @@ public class CSVFileOps {
     }
     writer.close();
   }
-}
+
+  public static void csvReadToSQL(String filePath) throws IOException {
+    CSVReader reader = new CSVReader(new FileReader(filePath));
+    List<String[]> list = reader.readAll();
+    String[]newSQL= new String[list.size()];
+    Iterator<String[]> iterator = list.iterator();
+    System.out.println();
+    while (iterator.hasNext()) {
+      String[] row = iterator.next();
+      for (int i = 0; i < row.length; i++)
+        System.out.print(row[i] + ", ");
+      System.out.println();
+      }
+      System.out.println();
+    }
+
+  }
+
