@@ -29,7 +29,7 @@ public class CsvOpsTestSteps extends BaseUtil implements En {
                 () -> {
                     String[] dataToWrite = {"chin", "muoi", "muoi mot", "muoi hai"};
                     try {
-                        CSVFileOps.csvWrite(".\\src\\test\\TestData\\csvTestData.csv", dataToWrite);
+                        CSVFileOps.csvWrite(".\\csvTestData_Write.csv", dataToWrite);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -46,8 +46,8 @@ public class CsvOpsTestSteps extends BaseUtil implements En {
                 });
         Given("^ich lese daten aus csvFileToSql$", () -> {
             try {
-                CSVFileOps.csvReadToSQL("/Users/hnguyen/JavaTutor/Cucumber/src/test/TestData/csvTestData.csv");
-
+               //CSVFileOps.csvReadToSQL("/Users/hnguyen/JavaTutor/Cucumber/src/test/TestData/csvTestData.csv");
+               CSVFileOps.csvReadToSQL("/Users/hnguyen/Desktop/postal.csv");
             } catch (IOException e) {
                 e.printStackTrace();
             }

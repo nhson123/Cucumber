@@ -601,7 +601,7 @@ public class BausDB_Personenadmin_PF {
     }
 
     @CacheLookup
-    @FindBy(how = How.XPATH, using = "//ul[@class='navbar-nav ml-auto']//a[@id='navbarDropdown']")
+    @FindBy(how = How.XPATH, using = "//a[@id='navbarDropdown']")
     WebElement logged_User;
 
     public boolean logged_User_check() {

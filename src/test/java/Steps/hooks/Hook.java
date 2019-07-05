@@ -95,6 +95,7 @@ public class Hook extends BaseUtil {
             System.out.println("Oh wehh " + scenario.getName() + " schlägt fehlt");
         }
         System.out.println("-----------------Start of Scenario-----------------");
+        System.out.println();
     }
 
 
@@ -113,6 +114,7 @@ public class Hook extends BaseUtil {
     public void afterScenarioFinish() {
         // SendTestReportAsEmail send = new SendTestReportAsEmail();
         // send.sendEmail();
+        System.out.println();
         System.out.println("-----------------WebDriver closed-----------------");
     }
 }

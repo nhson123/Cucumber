@@ -37,7 +37,7 @@ public class BausDB_SNM_Auswertung_WW implements En {
             bausDB_snm_auswertung_ww_pf.url_Copy_click();
             assertNotEquals(before,bausDB_snm_auswertung_ww_pf.get_Temp_Url("value"));
             base.webDriver.get(bausDB_snm_auswertung_ww_pf.get_Temp_Url("value"));
-            assertEquals(base.webDriver.getTitle(), "Wiener Wohnen | Bauservices DB");
+            assertEquals("Wiener Wohnen | Bauservices DB",base.webDriver.getTitle() );
             bausDB_snm_auswertung_details_pf = PageFactory.initElements(base.webDriver,BausDB_SNM_Auswertung_Details_PF.class);
             assertTrue(bausDB_snm_auswertung_details_pf.ww_Logo_Check());
             assertTrue(bausDB_snm_auswertung_details_pf.table_Header_Check());
